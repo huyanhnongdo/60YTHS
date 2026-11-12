@@ -366,6 +366,15 @@ body.loading{overflow:hidden}
 .team-pics figcaption{font-size:15px;line-height:1.4;padding:10px 4px 0}
 @media (max-width:720px){.team-pics{grid-template-columns:1fr}}
 
+
+.tc.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(240px,360px) 1fr}
+.tc.feature .ph-btn{aspect-ratio:4/5;height:100%;cursor:default}
+.tc.feature .body{border-top:0;border-left:6px solid var(--red);padding:28px 32px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.tc.feature h3{font-size:clamp(28px,3.4vw,38px)}
+.tc.feature .subj{margin:0 0 4px;font-size:16px}
+.tc.feature p{font-size:16.5px;max-width:42em}
+@media (max-width:720px){.tc.feature{grid-template-columns:1fr}.tc.feature .body{border-left:0;border-top:6px solid var(--red);padding:18px 20px 22px}}
+
 /* chân trang */
 .foot{background:var(--deep);color:var(--mist);padding:56px 0;font-size:15.5px}
 .foot .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
@@ -598,6 +607,7 @@ body.loading{overflow:hidden}
     <h2>Thầy cô của chúng em</h2>
     <p class="intro">Không chỉ miệt mài trên bục giảng, các thầy cô còn là người truyền cảm hứng và dìu dắt chúng em trưởng thành. Đây là lời học sinh lớp 12A8 viết về thầy cô của mình. Bấm vào ảnh để xem ảnh khác.</p>
     <div class="tgrid">
+<article class="tc feature"><div class="ph-btn" role="img" aria-label="Thầy Vũ Đình Nghiệp phát biểu trong lễ kỷ niệm Ngày Nhà giáo Việt Nam"><img src="img/nghiep-1.jpg" alt="" class="on" style="object-position:center 25%" loading="lazy"></div><div class="body"><h3>Thầy Vũ Đình Nghiệp</h3><div class="subj">Hiệu trưởng nhà trường</div><p>Thầy hài hước, vui vẻ và nhiệt tình, lúc nào cũng gần gũi với nụ cười tươi. Trong công việc, thầy tận tâm và hết lòng vì nhà trường cùng các thế hệ học sinh.</p><p>Không chỉ quan tâm việc học, thầy còn dạy chúng em cách ứng xử, cách sống tử tế, biết yêu thương và tôn trọng mọi người. Thầy như một người cha luôn dõi theo, mong các con trưởng thành, tự tin và trở thành người có ích. Chúng em biết ơn, kính trọng và tự hào khi được học dưới mái trường có người thầy như thầy.</p></div></article>
 <article class="tc"><button class="ph-btn" type="button" aria-label="Xem ảnh khác của Cô Đặng Thị Út"><img src="img/ut-1.jpg" alt="Cô Út mặc áo dài đỏ, cầm giấy khen" class="on" style="object-position:center 20%" loading="lazy"><img src="img/ut-2.jpg" alt="Cô Út ngồi dưới tán hoa" class="" style="object-position:70% 20%" loading="lazy"><img src="img/ut-3.jpg" alt="Cô Út giữa cánh đồng hoa" class="" style="object-position:center 40%" loading="lazy"><span class="count" aria-hidden="true">1/3</span></button><div class="body"><h3>Cô Đặng Thị Út</h3><div class="subj">Tiếng Anh</div><p>Cô luôn mang theo nụ cười và năng lượng tích cực, trên lớp cũng như ngoài đời. Cô giảng dễ hiểu, logic, và biết khơi gợi niềm yêu thích Tiếng Anh ở từng học sinh. Những lúc gặp khó khăn, chúng em đều có thể tìm đến cô để chia sẻ.</p></div></article>
 <article class="tc"><button class="ph-btn" type="button" aria-label="Xem ảnh khác của Thầy Giáp Thế Cường"><img src="img/cuong-1.jpg" alt="Thầy Cường cười tươi trong ngày hội của trường" class="on" style="object-position:55% 15%" loading="lazy"><img src="img/cuong-2.jpg" alt="Thầy Cường mặc vest trong sân trường" class="" style="object-position:center 20%" loading="lazy"><span class="count" aria-hidden="true">1/2</span></button><div class="body"><h3>Thầy Giáp Thế Cường</h3><div class="subj">Toán</div><p>Thầy gần gũi và ấm áp như một người anh lớn. Mỗi khi thầy bước vào lớp với nụ cười tươi, không khí học tập nhẹ hẳn đi. Thầy giải thích dễ hiểu, kiên nhẫn trả lời mọi câu hỏi và luôn dành thêm thời gian cho những bạn còn gặp khó.</p></div></article>
 <article class="tc"><button class="ph-btn" type="button" aria-label="Ảnh Cô Ninh Thị Thu Hà"><img src="img/ha-1.jpg" alt="Cô Ninh Thị Thu Hà mặc áo dài đỏ, ngồi bên thác nước" class="on" style="object-position:center 30%" loading="lazy"></button><div class="body"><h3>Cô Ninh Thị Thu Hà</h3><div class="subj">Tin học</div><p class="wait">Chờ lời giới thiệu của lớp</p></div></article>
