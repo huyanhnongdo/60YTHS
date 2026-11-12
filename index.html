@@ -396,6 +396,22 @@ body.loading{overflow:hidden}
 .tc.feature.flip .body{border-left:0;border-right:6px solid var(--navy)}
 @media (max-width:720px){.tc.feature.flip{grid-template-columns:1fr}.tc.feature.flip .ph-btn{order:0}.tc.feature.flip .body{border-right:0;border-top:6px solid var(--navy)}}
 .tc.feature .body.minh{border-left-color:var(--yellow)}
+
+/* câu chuyện sáu mươi năm */
+.story{background:var(--white)}
+.chaps{margin-top:44px;display:flex;flex-direction:column;gap:56px}
+.chap{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:24px 56px;align-items:start}
+.chap-head{position:sticky;top:84px;border-top:6px solid var(--yellow);padding-top:14px}
+.chap:nth-child(2) .chap-head{border-color:var(--red)}
+.chap:nth-child(3) .chap-head{border-color:var(--navy)}
+.chap:nth-child(4) .chap-head{border-color:var(--sky)}
+.chap-y{display:block;font-family:var(--display);font-weight:900;font-size:clamp(34px,4.4vw,52px);line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.chap-head h3{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.4vw,28px);line-height:1.2;margin-top:10px}
+.chap-body{max-width:38em}
+.chap-body p{font-size:17.5px;line-height:1.75;margin:0 0 16px}
+.chap-body p:first-child::first-letter{font-family:var(--display);font-weight:900;font-size:3.1em;float:left;line-height:.85;margin:6px 10px 0 0;color:var(--red)}
+@media (max-width:820px){.chap{grid-template-columns:1fr}.chap-head{position:static}}
+
 /* chân trang */
 .foot{background:var(--deep);color:var(--mist);padding:56px 0;font-size:15.5px}
 .foot .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
@@ -445,6 +461,7 @@ body.loading{overflow:hidden}
     <nav aria-label="Các phần của trang">
       <ul>
         <li><a href="#hanh-trinh">Hành trình</a></li>
+        <li><a href="#cau-chuyen">Câu chuyện</a></li>
         <li><a href="#bang-vang">Bảng vàng</a></li>
         <li><a href="#hoi-uc">Hồi ức</a></li>
         <li><a href="#tu-lieu">Tư liệu</a></li>
@@ -542,6 +559,31 @@ body.loading{overflow:hidden}
       </div>
     </div>
     <div class="wrap"><div class="bar" aria-hidden="true"><i id="bar"></i></div></div>
+  </div>
+</section>
+
+<section class="sec story on-light" id="cau-chuyen">
+  <div class="wrap">
+    <h2>Câu chuyện sáu mươi năm</h2>
+    <p class="intro">Viết lại theo bài giới thiệu chính thức của nhà trường.</p>
+    <div class="chaps">
+      <article class="chap">
+        <div class="chap-head"><span class="chap-y">1966 – 1979</span><h3>Trên đồi Đồn Hố Chuối</h3></div>
+        <div class="chap-body"><p>Năm 1966, cuộc kháng chiến chống Mỹ bước vào giai đoạn quyết liệt. Yên Thế khi ấy là huyện miền núi dân thưa, rừng rậm, đường xa; con em trong huyện học hết cấp 2 thì hầu như dừng lại, ít người được đi học nhờ ở huyện khác cách vài chục cây số. Đáp lại mong mỏi đó, tháng 9 năm 1966, Ủy ban Hành chính tỉnh Hà Bắc cho phép lập Trường cấp 3 Yên Thế trên đồi Đồn Hố Chuối, xã Phồn Xương, nơi nghĩa quân Hoàng Hoa Thám từng đánh Pháp cuối thế kỷ XIX.</p><p>Ngày đầu, trường có 4 lớp, 10 thầy cô, Hiệu trưởng là thầy Nguyễn Quang Bích. Có trường mà chưa có lớp, thầy trò vừa học vừa phá đá, mở đất, dựng những lớp học nửa chìm nửa nổi, phía trước đắp ụ đất tránh bom. Các lớp trải dài trên khu đồi hơn một cây số, nối nhau bằng giao thông hào dẫn tới hầm chữ A. Có hôm giờ học vừa bắt đầu thì kẻng báo động vang lên, cả lớp xuống hầm; tiếng bom vừa dứt, thầy trò lại lên học tiếp.</p><p>Giữa thiếu thốn, chất lượng của trường vẫn sánh được với những trường mạnh trong tỉnh. Năm học 1970 – 1971, hai học sinh Nguyễn Thị Minh Đức và Hoàng Thảo Nguyên đoạt giải quốc gia môn Văn. Năm 1972, Thứ trưởng Bộ Giáo dục Lê Chưởng về thăm và khen công tác giữ an toàn cho thầy trò. Nhiều thế hệ học sinh, cả một số thầy cô, đã rời bục giảng lên đường nhập ngũ; có người đã nằm lại nơi chiến trường.</p></div>
+      </article>
+      <article class="chap">
+        <div class="chap-head"><span class="chap-y">1979 – 1996</span><h3>Về thị trấn Cầu Gồ</h3></div>
+        <div class="chap-body"><p>Hết năm học 1978 – 1979, theo quy hoạch của huyện, trường dời về trung tâm thị trấn Cầu Gồ. Những lớp học gạch ngói đầu tiên vẫn chỉ là nhà bán kiên cố, dựng theo tinh thần Nhà nước và nhân dân cùng làm, nhưng thầy trò đã gắng hết sức để có một ngôi trường khang trang.</p><p>Những năm 1970 – 1980, đội bóng đá, bóng chuyền của trường thuộc hàng mạnh nhất tỉnh. Từ năm 1980 đến 1996, ba dãy lớp học gạch ngói, nhà tập thể giáo viên và khu làm việc của Ban giám hiệu lần lượt mọc lên. Năm 1996, trường nhận Huân chương Lao động hạng Ba, phần thưởng cao quý đầu tiên.</p></div>
+      </article>
+      <article class="chap">
+        <div class="chap-head"><span class="chap-y">1997 – nay</span><h3>Vững bước</h3></div>
+        <div class="chap-body"><p>Năm 1997, dãy nhà ba tầng với 18 phòng học kiên cố được khởi công. Năm 2005, trường được công nhận đạt chuẩn quốc gia. Từ 4 lớp học ban đầu, trường nay có 30 lớp với hơn 1.200 học sinh, có phòng thí nghiệm, phòng tin học, nhà đa năng và sân chơi bãi tập.</p><p>Năm 2012, trường nhận Bằng khen của Thủ tướng Chính phủ; năm 2016, nhân dịp 50 năm thành lập, trường đón Huân chương Lao động hạng Nhì. Những năm gần đây, trường luôn nằm trong nhóm dẫn đầu tỉnh về học sinh giỏi, tỉ lệ tốt nghiệp giữ từ 95% đến 100%, nhiều học sinh đỗ cùng lúc hai, ba trường đại học, có em là thủ khoa.</p></div>
+      </article>
+      <article class="chap">
+        <div class="chap-head"><span class="chap-y">60 năm</span><h3>Những thế hệ học trò</h3></div>
+        <div class="chap-body"><p>Học sinh của trường là con em các dân tộc Kinh, Tày, Nùng, Cao Lan trên đất Yên Thế. Nhiều người đã trở thành nhà khoa học, giảng viên đại học, kỹ sư, cán bộ quản lý từ trung ương đến địa phương. Thiếu tướng Nông Văn Định, cựu học sinh khóa 1972 – 1975, được phong tặng danh hiệu Anh hùng Lực lượng vũ trang nhân dân năm 1995.</p><p>Nhiều người học xong lại trở về quê hương. Phần lớn thầy cô, ban giám hiệu các trường trong huyện từng là học trò của trường; ngay tại Trường THPT Yên Thế, hai phần ba thầy cô hôm nay cũng từng ngồi dưới mái trường này. Dưới một mái trường, ba, bốn thế hệ thầy trò cùng nối tiếp nhau giữ lấy truyền thống hiếu học trên mảnh đất Hoàng Hoa Thám.</p></div>
+      </article>
+    </div>
   </div>
 </section>
 
