@@ -412,6 +412,30 @@ body.loading{overflow:hidden}
 .chap-body p:first-child::first-letter{font-family:var(--display);font-weight:900;font-size:3.1em;float:left;line-height:.85;margin:6px 10px 0 0;color:var(--red)}
 @media (max-width:820px){.chap{grid-template-columns:1fr}.chap-head{position:static}}
 
+
+/* học sinh giỏi theo năm */
+.honor{margin-top:56px}
+.honor-h{font-family:var(--display);font-weight:900;font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-bottom:18px}
+.htabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.htabs button{font:inherit;font-weight:700;font-size:16px;min-height:48px;padding:10px 18px;border-radius:6px;border:3px solid var(--deep);background:transparent;color:var(--deep);cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.htabs button span{font-family:var(--display);font-weight:900;font-size:20px;color:var(--red)}
+.htabs button[aria-selected="true"]{background:var(--deep);color:var(--white)}
+.htabs button[aria-selected="true"] span{color:var(--yellow)}
+.htabs button:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.hp-note{font-size:17px;margin-bottom:18px}
+.prizes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}
+.prize{background:var(--white);border-radius:6px;padding:16px 18px 10px;border-top:8px solid var(--red)}
+.prize.p-1{border-color:var(--navy)}.prize.p-2{border-color:var(--sky)}.prize.p-3{border-color:var(--deep)}
+.prize h4{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 6px;font-family:var(--display);font-weight:700;font-size:22px}
+.prize h4 em{font-style:normal;font-weight:900;font-size:28px;color:var(--navy)}
+.prize ul{list-style:none;margin:0;padding:0}
+.prize li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid rgba(29,63,143,.14);font-size:15.5px;line-height:1.35}
+.prize li:last-child{border-bottom:0}
+.prize li b{font-weight:500}
+.prize li span{font-size:14px;color:var(--navy);white-space:nowrap}
+@media (max-width:980px){.prizes{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.prizes{grid-template-columns:1fr}}
+
 /* chân trang */
 .foot{background:var(--deep);color:var(--mist);padding:56px 0;font-size:15.5px}
 .foot .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
@@ -597,7 +621,17 @@ body.loading{overflow:hidden}
       <div class="row"><div class="n"><span data-to="26">26</span><small> giải</small></div><div><h3>ở hội thao quốc phòng an ninh cấp tỉnh</h3><p>Nhất toàn đoàn, và góp 14 giải ở hội thao toàn quốc.</p></div></div>
       <div class="row"><div class="n"><span data-to="2">2</span><small> Huân chương</small></div><div><h3>Lao động do Nhà nước trao tặng</h3><p>Hạng Ba năm 1996 và hạng Nhì năm 2016, cùng Bằng khen của Thủ tướng Chính phủ năm 2012.</p></div></div>
       <div class="row"><div class="n">2<small>/3</small></div><div><h3>thầy cô của trường từng là học trò ở đây</h3><p>Ba, bốn thế hệ thầy trò cùng đứng dưới một mái trường.</p></div></div>
+      <div class="row"><div class="n"><span data-to="30">30</span><small>/30</small></div><div><h3>học sinh dự thi cấp tỉnh có giải</h3><p>Năm học 2023 – 2024, cả 30 em trong đội tuyển đều đoạt giải, trong đó 3 giải Nhất.</p></div></div>
       <div class="row"><div class="n"><span data-to="6">6</span><small> năm liền</small></div><div><h3>dẫn đầu kỳ thi học sinh giỏi cấp tỉnh</h3><p>Tính đến năm 2021, với 27 giải trong kỳ thi năm đó.</p></div></div>
+    </div>
+    <div class="honor">
+      <h3 class="honor-h">Học sinh giỏi cấp tỉnh</h3>
+      <div class="htabs" role="tablist" aria-label="Chọn năm học">
+        <button type="button" role="tab" id="hsg-2526-t" aria-controls="hsg-2526" aria-selected="true">Năm học 2025 – 2026 <span>47/49</span></button>
+        <button type="button" role="tab" id="hsg-2324-t" aria-controls="hsg-2324" aria-selected="false" tabindex="-1">Năm học 2023 – 2024 <span>30/30</span></button>
+      </div>
+      <div class="hp" id="hsg-2526" role="tabpanel" aria-labelledby="hsg-2526-t"><p class="hp-note">47 trên 49 học sinh dự thi đoạt giải, trường xếp thứ nhất toàn tỉnh.</p><div class="prizes"><div class="prize p-0"><h4>Giải Nhất<em>4</em></h4><ul><li><b>Hồ Hà Linh</b><span>Hóa học</span></li><li><b>Nguyễn Tùng Nguyên</b><span>Tiếng Anh</span></li><li><b>Nguyễn Cao Phong</b><span>Vật lí</span></li><li><b>Nguyễn Văn Tuyên</b><span>Vật lí</span></li></ul></div><div class="prize p-1"><h4>Giải Nhì<em>12</em></h4><ul><li><b>Trần Thị Kiều Diễm</b><span>Địa lí</span></li><li><b>Nguyễn Thị Trang</b><span>Địa lí</span></li><li><b>Nguyễn Phương Linh</b><span>Hóa học</span></li><li><b>Tạ Bích Loan</b><span>Lịch sử</span></li><li><b>Lưu Ngọc Thủy</b><span>Ngữ văn</span></li><li><b>Nguyễn Hoàng Dương</b><span>Tiếng Anh</span></li><li><b>Bùi Quang Minh</b><span>Tiếng Anh</span></li><li><b>Đào Đức An</b><span>Tin học</span></li><li><b>Nông Đỗ Huy Anh</b><span>Tin học</span></li><li><b>Hoàng Văn Nghiệp</b><span>Tin học</span></li><li><b>Vương Hoài Tam</b><span>Tin học</span></li><li><b>Lăng Hoàng Hải</b><span>Toán</span></li></ul></div><div class="prize p-2"><h4>Giải Ba<em>15</em></h4><ul><li><b>Bùi Nguyễn Kiều Dung</b><span>Địa lí</span></li><li><b>Trần Ngọc Bảo Lan</b><span>Địa lí</span></li><li><b>Trần Thị Khánh Linh</b><span>Địa lí</span></li><li><b>Đặng Lâm Anh</b><span>Hóa học</span></li><li><b>Nguyễn Châu Anh</b><span>Hóa học</span></li><li><b>Nguyễn Thị Mai Phương</b><span>Hóa học</span></li><li><b>Sầm Thị Tâm</b><span>Lịch sử</span></li><li><b>Hoàng Thị Mai Trang</b><span>Lịch sử</span></li><li><b>Hứa Thị Ngọc Huyền</b><span>Ngữ văn</span></li><li><b>Ngô Minh Ngọc</b><span>Ngữ văn</span></li><li><b>Nguyễn Trí Dũng</b><span>Sinh học</span></li><li><b>Lý Trường Thành</b><span>Tiếng Anh</span></li><li><b>Đỗ Đình Tùng</b><span>Tin học</span></li><li><b>Ngô Thùy Linh</b><span>Toán</span></li><li><b>Nguyễn Thành Trung</b><span>Vật lí</span></li></ul></div><div class="prize p-3"><h4>Giải khuyến khích<em>16</em></h4><ul><li><b>Vi Phương Huyền</b><span>Địa lí</span></li><li><b>Nguyễn Minh Khánh</b><span>Địa lí</span></li><li><b>Nguyễn Công Hoàn</b><span>Lịch sử</span></li><li><b>Đào Thị Nguyệt</b><span>Lịch sử</span></li><li><b>Phạm Thị Yến Nhi</b><span>Lịch sử</span></li><li><b>Hoàng Diệp Anh</b><span>Ngữ văn</span></li><li><b>Nông Thị Hoài Thu</b><span>Ngữ văn</span></li><li><b>Đỗ Việt Hoàng</b><span>Sinh học</span></li><li><b>Dương Hà Linh</b><span>Sinh học</span></li><li><b>Phạm Xuân Quyền</b><span>Sinh học</span></li><li><b>Đào Huyền Diệu</b><span>Tiếng Anh</span></li><li><b>Đinh Hiểu Ly</b><span>Tiếng Anh</span></li><li><b>Nguyễn Lê Phan Anh</b><span>Toán</span></li><li><b>Nguyễn Hà Tùng Lâm</b><span>Toán</span></li><li><b>Nguyễn Tuấn Long</b><span>Toán</span></li><li><b>Nguyễn Đức Tùng</b><span>Vật lí</span></li></ul></div></div></div>
+      <div class="hp" id="hsg-2324" role="tabpanel" aria-labelledby="hsg-2324-t" hidden><p class="hp-note">30 trên 30 học sinh dự thi đoạt giải, không em nào trượt.</p><div class="prizes"><div class="prize p-0"><h4>Giải Nhất<em>3</em></h4><ul><li><b>Hoàng Minh Ánh</b><span>Địa lí</span></li><li><b>Trương Hồng Anh</b><span>Địa lí</span></li><li><b>Đào Đức Minh</b><span>Tin học</span></li></ul></div><div class="prize p-1"><h4>Giải Nhì<em>9</em></h4><ul><li><b>Đồng Nguyễn Thảo Việt</b><span>Địa lí</span></li><li><b>Nguyễn Thị Hải Ninh</b><span>GDCD</span></li><li><b>Đỗ Duy Thành</b><span>Hóa học</span></li><li><b>Lý Thị Phượng</b><span>Hóa học</span></li><li><b>Nông Trung Hiếu</b><span>Hóa học</span></li><li><b>Bùi Diệp Chi</b><span>Lịch sử</span></li><li><b>Hoàng Đặng Thái Bình</b><span>Sinh học</span></li><li><b>Phạm Thị Khánh Vy</b><span>Sinh học</span></li><li><b>Đoàn Triệu Khang</b><span>Tiếng Anh</span></li></ul></div><div class="prize p-2"><h4>Giải Ba<em>10</em></h4><ul><li><b>Trần Thị Quỳnh Anh</b><span>Lịch sử</span></li><li><b>Long Phương Thảo</b><span>Ngữ văn</span></li><li><b>Phạm Thu Trang</b><span>Sinh học</span></li><li><b>Nguyễn Ngọc Anh</b><span>Tiếng Anh</span></li><li><b>Nguyễn Tiến Đạt</b><span>Tin học</span></li><li><b>Nông Hồng Phúc</b><span>Tin học</span></li><li><b>Phương Như Quỳnh</b><span>Toán</span></li><li><b>Ngô Thị Tuyến</b><span>Toán</span></li><li><b>Trương Đức Thành</b><span>Vật lí</span></li><li><b>Phạm Thị Bình</b><span>Vật lí</span></li></ul></div><div class="prize p-3"><h4>Giải khuyến khích<em>8</em></h4><ul><li><b>Nguyễn Yến Nhi</b><span>GDCD</span></li><li><b>Dương Thị Hòa</b><span>GDCD</span></li><li><b>Nguyễn Thùy Dương</b><span>Lịch sử</span></li><li><b>Nguyễn Hoàng Giang</b><span>Ngữ văn</span></li><li><b>Trương Ngọc Mai</b><span>Ngữ văn</span></li><li><b>Nguyễn Hồng Hạnh</b><span>Tiếng Anh</span></li><li><b>Nguyễn Mạnh Cường</b><span>Toán</span></li><li><b>Phạm Thị Kim Oanh</b><span>Vật lí</span></li></ul></div></div></div>
     </div>
     <div class="team-pics">
       <figure><img src="img/tin-2526.jpg" alt="Đội tuyển Tin học năm học 2025 – 2026 cùng cô giáo trước tượng đài Hoàng Hoa Thám" width="900" height="1080" loading="lazy"><figcaption>Đội tuyển Tin học năm học 2025 – 2026</figcaption></figure>
@@ -925,6 +959,22 @@ body.loading{overflow:hidden}
     });
     findmsg.textContent = !q ? '' : (n ? 'Có ' + n + ' người khớp với “' + find.value.trim() + '”.' : 'Không có ai khớp với “' + find.value.trim() + '”. Thử gõ họ, tên hoặc tên môn.');
   });
+
+
+  /* --- bảng vàng: chuyển năm học --- */
+  var htabs = document.querySelectorAll('.htabs [role="tab"]');
+  htabs.forEach(function(tb, i){
+    tb.addEventListener('click', function(){ pick(i); });
+    tb.addEventListener('keydown', function(ev){
+      if(ev.key === 'ArrowRight' || ev.key === 'ArrowLeft'){ ev.preventDefault(); var j = (i + (ev.key === 'ArrowRight' ? 1 : -1) + htabs.length) % htabs.length; pick(j); htabs[j].focus(); }
+    });
+  });
+  function pick(i){
+    htabs.forEach(function(tb, k){
+      var on = k === i; tb.setAttribute('aria-selected', on); tb.tabIndex = on ? 0 : -1;
+      document.getElementById(tb.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
 
   /* --- bảng tên cuối phim --- */
   var roll = document.getElementById('roll');
