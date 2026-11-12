@@ -221,6 +221,10 @@ a{color:inherit}
 .q{position:relative;padding-top:26px}
 .q::before{content:"";position:absolute;top:0;left:0;width:72px;height:8px;border-radius:4px;background:var(--red)}
 .q:nth-child(2)::before{background:var(--navy)}
+.q .qph{margin:0 0 20px;width:150px;background:var(--white);padding:7px 7px 9px;box-shadow:0 0 0 1px rgba(29,63,143,.18),6px 6px 0 var(--yellow);transform:rotate(-2deg)}
+.q .qph img{display:block;width:100%;height:auto}
+.q .src{margin-top:10px;font-size:14.5px;color:var(--navy)}
+.q .src a{color:var(--navy);text-underline-offset:3px}
 .q blockquote{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(26px,3.2vw,38px);line-height:1.22;color:var(--navy)}
 .q .ctx{margin-top:16px;font-size:16.5px}
 .q .who{margin-top:14px;font-weight:700}
@@ -531,10 +535,12 @@ body.loading{overflow:hidden}
     <h2>Hồi ức</h2>
     <p class="intro">Lời kể của những người đã sống cùng ngôi trường từ ngày đầu. Bản chính thức sẽ dẫn tới bài viết đầy đủ trên cổng thông tin của trường.</p>
     <div class="quotes">
-      <div class="q">
+      <div class="q has-ph">
+        <figure class="qph"><img src="img/chien-1.jpg" alt="Nhà giáo Nguyễn Thị Chiến mặc áo dài tím đứng trước dãy phòng của trường" width="300" height="375" loading="lazy"></figure>
         <blockquote>“đầy ắp tiếng cười, tình người, tình thầy trò”</blockquote>
         <p class="ctx">Cô kể về những năm học dưới mái tranh ở Hố Chuối: nghèo, đơn sơ, nhưng không ai bỏ học.</p>
         <p class="who">Nhà giáo Nguyễn Thị Chiến<span>Học sinh khóa đầu tiên 1966 – 1969, nguyên Quyền Hiệu trưởng</span></p>
+        <p class="src">Ảnh từ bài <a href="https://thptyenthe.bacninh.edu.vn/cong-khai/60-nam-thanh-lap-truong/truong-cap-3-yen-the-than-thuong-mot-thoi-de-nho-va-tu-hao.html" target="_blank" rel="noopener">Trường cấp 3 Yên Thế thân thương</a> trên cổng thông tin của trường</p>
       </div>
       <div class="q">
         <blockquote>“tình người, tình đồng nghiệp, nghĩa thày trò”</blockquote>
