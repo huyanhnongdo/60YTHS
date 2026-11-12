@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trang kỷ niệm 60 năm thành lập Trường THPT Yên Thế (1966 – 2026): hành trình, tư liệu, thầy cô và học trò. Tự hào truyền thống – Vững bước tương lai.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kỷ niệm 60 năm thành lập Trường THPT Yên Thế (1966 – 2026)">
+<meta property="og:description" content="Tự hào truyền thống – Vững bước tương lai. Sáu mươi năm của trường, kể lại như một thước phim.">
+<meta property="og:image" content="https://huyanhnongdo.github.io/60YTHS/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://huyanhnongdo.github.io/60YTHS/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/logo.png">
 <title>60 năm THPT Yên Thế – bản phác thảo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,6 +138,9 @@ a{color:inherit}
 
 .hero .title{z-index:2}
 .hero:not(.done) .title{visibility:hidden}
+.title .slogan{margin:18px auto 0;font-family:var(--display);font-weight:700;font-size:clamp(20px,2.6vw,28px);line-height:1.25;color:var(--red);opacity:0;transition:opacity .8s ease 1.35s}
+.hero.done .title .slogan{opacity:1}
+@media (prefers-reduced-motion:reduce){.title .slogan{opacity:1}}
 .title .tag{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(30px,4.6vw,48px);line-height:1.1;color:var(--yellow);margin-bottom:10px;opacity:0;transform:translateY(12px);transition:opacity .6s ease .5s,transform .6s ease .5s}
 .hero.done .title .tag{opacity:1;transform:none}
 .mark .six{transition-delay:.55s}.mark .reel{transition-delay:.7s}
@@ -299,6 +312,9 @@ dialog.box .btn{min-height:44px;padding:8px 18px}
 
 /* đội ngũ hôm nay */
 .staff{background:var(--white)}
+.staff-photo{margin:36px 0 0;background:var(--white);padding:10px 10px 12px;box-shadow:0 0 0 1px rgba(29,63,143,.15),8px 8px 0 var(--yellow)}
+.staff-photo img{display:block;width:100%;height:auto}
+.staff-photo figcaption{font-size:15px;padding:10px 4px 0}
 .leads{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 .lead{background:var(--navy);color:var(--white);border-radius:6px;padding:22px 24px;display:flex;flex-direction:column;gap:2px}
 .lead:first-child{background:var(--deep)}
@@ -384,6 +400,7 @@ body.loading{overflow:hidden}
 .foot{background:var(--deep);color:var(--mist);padding:56px 0;font-size:15.5px}
 .foot .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
 .foot .motto{display:block;margin-bottom:36px}
+.foot .motto span{display:block;margin-top:8px;font-size:17px;color:var(--mist)}
 .foot .motto p{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.15;color:var(--yellow)}
 .foot b{color:var(--white);font-family:var(--display);font-size:22px;display:block;margin-bottom:8px}
 .ph{background:rgba(246,197,46,.22);border-bottom:2px dashed var(--yellow);padding:0 4px}
@@ -462,7 +479,8 @@ body.loading{overflow:hidden}
       <span class="line"><span>Trường THPT Yên Thế</span></span>
       <span class="line"><span>1966 – 2026</span></span>
     </h1>
-    <p class="lede">Từ bốn lớp học dựng trên đồi Đồn Hố Chuối năm 1966 đến ngôi trường của hơn 1.200 học sinh hôm nay. Sáu mươi năm, kể lại như một thước phim.</p>
+    <p class="slogan">Tự hào truyền thống – Vững bước tương lai</p>
+    <p class="lede">Từ bốn lớp học dựng trên đồi Đồn Hố Chuối năm 1966 đến ngôi trường của hơn 1.200 học sinh hôm nay.</p>
     <div class="acts">
       <a class="btn go" href="#hanh-trinh">Xem hành trình<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
     </div>
@@ -531,7 +549,7 @@ body.loading{overflow:hidden}
           <div class="txt"><div class="y">2026</div><h3>Nhất tỉnh về học sinh giỏi</h3><p>47 trên 49 học sinh dự thi cấp tỉnh có giải, trong đó 4 giải Nhất và 12 giải Nhì. Trường xếp thứ nhất toàn tỉnh.</p></div>
         </div></article>
         <article class="frame key"><div class="inner">
-          <div class="shot has"><img src="img/tt/t03.jpg" alt="Tập thể cán bộ, giáo viên nhà trường" loading="lazy"><span class="cap">Tập thể cán bộ, giáo viên nhà trường</span></div>
+          <div class="shot has"><img src="img/pano.jpg" alt="Pano kỷ niệm 60 năm thành lập trường dựng ở sân trường, khẩu hiệu Tự hào truyền thống – Vững bước tương lai" loading="lazy"><span class="cap">Pano kỷ niệm 60 năm giữa sân trường</span></div>
           <div class="txt"><div class="y">Nay</div><h3>Tròn sáu mươi năm</h3><p>Nhất toàn đoàn hội thao quốc phòng an ninh, có một á khoa toàn quốc khối A01, và hơn 1.200 học sinh tiếp nối truyền thống của trường.</p></div>
         </div></article>
       </div>
@@ -629,6 +647,7 @@ body.loading{overflow:hidden}
   <div class="wrap">
     <h2>Đội ngũ hôm nay</h2>
     <p class="intro">73 thầy cô và nhân viên đang tiếp nối sáu mươi năm của trường, trong đó 15 thầy cô có bằng thạc sĩ. Danh sách theo cổng thông tin của nhà trường.</p>
+    <figure class="staff-photo"><img src="img/tt/t03.jpg" alt="Tập thể cán bộ, giáo viên Trường THPT Yên Thế" loading="lazy"><figcaption>Tập thể cán bộ, giáo viên nhà trường</figcaption></figure>
     <div class="leads"><div class="lead"><span class="r">Hiệu trưởng</span><b>Vũ Đình Nghiệp</b><span class="s">Hóa</span></div><div class="lead"><span class="r">Phó hiệu trưởng</span><b>Nguyễn Thị Hà</b><span class="s">Sinh học</span></div><div class="lead"><span class="r">Phó hiệu trưởng</span><b>Nguyễn Văn Minh</b><span class="s">Toán</span></div></div>
     <div class="finder">
       <label for="find">Tìm thầy cô theo tên hoặc môn dạy</label>
@@ -737,7 +756,7 @@ body.loading{overflow:hidden}
 </main>
 
 <footer class="foot">
-  <div class="wrap motto"><p>Học tập và rèn luyện vì ngày mai lập nghiệp</p></div>
+  <div class="wrap motto"><p>Tự hào truyền thống – Vững bước tương lai</p><span>Học tập và rèn luyện vì ngày mai lập nghiệp</span></div>
   <div class="wrap">
     <div><img src="img/logo.png" alt="Huy hiệu Trường THPT Yên Thế" width="84" height="89" style="display:block;width:84px;height:auto;margin-bottom:14px"><b>Trường THPT Yên Thế</b>Thôn Hoàng Hoa Thám, xã Yên Thế, tỉnh Bắc Ninh<br>Điện thoại: 02043 876 226<br>Lễ kỷ niệm 60 năm: ngày 13 và 14 tháng 11 năm 2026</div>
     <div>Trang do học sinh lớp 12A8 thực hiện. Tư liệu lấy từ cổng thông tin của trường.</div>
