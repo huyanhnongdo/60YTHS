@@ -214,7 +214,23 @@ a{color:inherit}
 .journey.native .pin{position:static;height:auto;padding:64px 0}
 .journey.native .scroller{overflow-x:auto;padding-bottom:12px}
 .journey.native .bar{display:none}
-.hint-swipe,.swipe-nav{display:none}
+.hint-swipe,.swipe-nav,.hint-touch{display:none}
+@media (pointer:coarse){.journey:not(.native) .hint-scroll{display:none}.journey:not(.native) .hint-touch{display:block}}
+@media (max-width:820px){
+  .frame .shot .cap{white-space:normal}
+  .journey:not(.native) .pin{padding:12px 0}
+  .journey:not(.native) .head{margin-bottom:10px}
+  .journey:not(.native) .pin h2{font-size:26px}
+  .journey:not(.native) .head p{font-size:15px;line-height:1.4}
+  .journey:not(.native) .film{padding:22px 0}
+  .journey:not(.native) .frame .shot{height:clamp(90px,19vh,170px)}
+  .journey:not(.native) .frame .shot:not(.has){height:calc(clamp(90px,19vh,170px) + 26px)}
+  .journey:not(.native) .frame .txt{padding:10px 14px 14px}
+  .journey:not(.native) .frame .y{font-size:36px}
+  .journey:not(.native) .frame h3{font-size:16.5px;margin:4px 0}
+  .journey:not(.native) .frame p{font-size:14.5px;line-height:1.45}
+  .journey:not(.native) .bar{margin-top:12px}
+}
 .journey.native .hint-scroll{display:none}
 .journey.native .hint-swipe{display:block}
 .journey.native .scroller{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
@@ -560,6 +576,7 @@ body.loading{overflow:hidden}
     <div class="wrap head">
       <h2>Hành trình sáu mươi năm</h2>
       <p class="hint-scroll">Cuộn xuống để cuốn phim chạy. Mỗi khung hình là một mốc của trường.</p>
+      <p class="hint-touch">Vuốt lên, hoặc vuốt sang hai bên, để cuốn phim chạy.</p>
       <p class="hint-swipe">Vuốt sang trái, sang phải để xem từng mốc của trường.</p>
     </div>
     <div class="scroller">
@@ -994,7 +1011,7 @@ body.loading{overflow:hidden}
   var maxX = 0;
   var mobileQ = window.matchMedia('(max-width: 820px), (pointer: coarse)');
   function measure(){
-    if(reduce || mobileQ.matches){ journey.classList.add('native'); journey.style.height = ''; film.style.transform = ''; updCount(); return; }
+    if(reduce){ journey.classList.add('native'); journey.style.height = ''; film.style.transform = ''; updCount(); return; }
     journey.classList.remove('native');
     var left = parseFloat(getComputedStyle(film).marginLeft) || 0;
     maxX = Math.max(0, film.offsetWidth + left*2 - window.innerWidth);
@@ -1097,6 +1114,31 @@ body.loading{overflow:hidden}
   fPrev.addEventListener('click', function(){ goFrame(curFrame() - 1); });
   fNext.addEventListener('click', function(){ goFrame(curFrame() + 1); });
   if(mobileQ.addEventListener) mobileQ.addEventListener('change', measure);
+
+  /* --- hành trình: vuốt sang hai bên cũng làm phim chạy (cuộn trang tương ứng) --- */
+  (function(){
+    var pin = journey.querySelector('.pin'), sx = 0, sy = 0, startScroll = 0, mode = 0;
+    pin.addEventListener('touchstart', function(e){
+      if(journey.classList.contains('native') || e.touches.length !== 1) return;
+      sx = e.touches[0].clientX; sy = e.touches[0].clientY; startScroll = window.scrollY; mode = 0;
+    }, {passive: true});
+    pin.addEventListener('touchmove', function(e){
+      if(journey.classList.contains('native') || e.touches.length !== 1) return;
+      var dx = e.touches[0].clientX - sx, dy = e.touches[0].clientY - sy;
+      if(!mode){ if(Math.abs(dx) < 8 && Math.abs(dy) < 8) return; mode = Math.abs(dx) > Math.abs(dy) ? 1 : 2; }
+      if(mode !== 1) return;
+      e.preventDefault();
+      window.scrollTo({top: startScroll - dx * 1.4, behavior: 'instant'});
+    }, {passive: false});
+    pin.addEventListener('touchend', function(){
+      if(mode !== 1) return; mode = 0;
+      // dừng gọn ở khung gần nhất
+      var top0 = journey.getBoundingClientRect().top + window.scrollY - 56, left = parseFloat(getComputedStyle(film).marginLeft) || 0;
+      var x = window.scrollY - top0, best = x, bd = 1e9;
+      frames.forEach(function(f){ var t = f.offsetLeft + left + f.offsetWidth / 2 - window.innerWidth / 2; t = Math.max(0, Math.min(maxX, t)); var d = Math.abs(t - x); if(d < bd){ bd = d; best = t; } });
+      window.scrollTo({top: top0 + best, behavior: 'smooth'});
+    });
+  })();
 
   /* --- mục lục trên điện thoại --- */
   var navEl = document.querySelector('.nav'), menuBtn = document.getElementById('menuBtn');
